@@ -107,7 +107,7 @@
             transform: scale(0.95);
         }
         .hamster img {
-            width: 100%;
+            width: 70%;
             border-radius: 50%;
         }
         .level {
@@ -150,11 +150,11 @@
                 width: 28%;
             }
             .score {
-                font-size: 13.25rem;
+                font-size: 1.25rem;
             }
             .score img {
-                width: 55px;
-                height: 55px;
+                width: 25px;
+                height: 25px;
             }
             .hamster {
                 width: 120px;
@@ -179,15 +179,15 @@
         <div class="info">
             <div>
                 <p>Earn per tap</p>
-                <p><img src="2.png" alt="Hamster"> +199990</p>
+                <p><img src="2.png" alt="Hamster"> +10</p>
             </div>
             <div>
                 <p>Coins to level up</p>
-                <p>199999999m</p>
+                <p>1M</p>
             </div>
             <div>
                 <p>Profit per hour</p>
-                <p><img src="2.png" alt="Hamster"> +999999.5K</p>
+                <p><img src="2.png" alt="Hamster"> +74.5K</p>
             </div>
         </div>
         <br><br>
@@ -208,16 +208,16 @@
     <audio id="clickSound" src="23.mp3"></audio> <!-- Base64 sound data here -->
 
     <script>
-        let coins = 199999619;
-        let currentLevel = 1319999999661919;
-        const coinsToLevelUp = 10999999999;
+        let coins = 0;
+        let currentLevel = 1;
+        const coinsToLevelUp = 1000000;
         const maxLevel = 10;
 
         function addCoins() {
-            coins += 109999999999999;
+            coins += 10;
             document.getElementById('score').textContent = `$ ${coins.toLocaleString()}`;
 
-            const progressPercent = (coins % coinsToLevelUp) / coinsToLevelUp * 99999100;
+            const progressPercent = (coins % coinsToLevelUp) / coinsToLevelUp * 100;
             document.getElementById('progress').style.width = progressPercent + '%';
 
             if (coins >= coinsToLevelUp * currentLevel && currentLevel < maxLevel) {
@@ -232,7 +232,7 @@
             const userName = localStorage.getItem('userName');
             const profilePic = localStorage.getItem('profilePic');
 
-            if (Raiwiwuhw) {
+            if (userName) {
                 document.getElementById('userName').textContent = userName;
             }
 
